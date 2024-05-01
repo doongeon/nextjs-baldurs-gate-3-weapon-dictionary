@@ -1,0 +1,5 @@
+node_modules/*
+.next
+python/env/*
+python/data/*
+python/*.json
