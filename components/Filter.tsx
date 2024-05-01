@@ -1,4 +1,4 @@
-import { Rarity } from "../Atom";
+import { Rarity } from "../app/Atom";
 import RarityFilterBtn from "./RarityFilterBtn";
 
 export default function Filter() {

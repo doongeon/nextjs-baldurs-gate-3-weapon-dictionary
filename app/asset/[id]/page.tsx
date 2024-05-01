@@ -3,8 +3,8 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { gameData } from "../../../gameData";
-import AssetCard from "../../components/AssetCard";
-import { Weapon } from "../../src/interfaces";
+import AssetCard from "../../../components/AssetCard";
+import { Weapon } from "../../../src/interfaces";
 
 const weapons = gameData.weapons;
 

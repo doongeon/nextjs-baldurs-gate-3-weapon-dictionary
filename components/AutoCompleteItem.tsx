@@ -1,7 +1,7 @@
 import { Weapon } from "../src/interfaces";
 import { useRouter } from "next/navigation";
 import { useSetRecoilState } from "recoil";
-import { autoCompeleteViewState } from "../Atom";
+import { autoCompeleteViewState } from "../app/Atom";
 import getRarityColor from "../src/getRarityColor";
 import styled from "styled-components";
 

@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { Rarity, rarityFilterState } from "../Atom";
+import { Rarity, rarityFilterState } from "../app/Atom";
 import getRarityColor from "../src/getRarityColor";
 import styled from "styled-components";
 import { useEffect, useState } from "react";

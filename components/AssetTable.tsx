@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { gameData } from "../../gameData";
-import { useEffect, useState } from "react";
+import { gameData } from "../gameData";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import filterWeapon from "../src/filterWeapon";
 import { Weapon } from "../src/interfaces";
 import { useRecoilValue } from "recoil";
-import { rarityFilterState } from "../Atom";
+import { rarityFilterState } from "../app/Atom";
 import getRarityColor from "../src/getRarityColor";
 import AssetTableItem from "./AssetTableItem";
 

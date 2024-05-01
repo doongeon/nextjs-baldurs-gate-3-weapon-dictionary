@@ -1,4 +1,4 @@
-import { Rarity } from "../Atom";
+import { Rarity } from "../app/Atom";
 
 export default function getRarityColor(rarity: Rarity | string): string {
   if (rarity === Rarity.Legendary) return "rgb(255, 89, 0)";

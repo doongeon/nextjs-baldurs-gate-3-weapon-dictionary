@@ -1,14 +1,15 @@
 "use client";
 
-import AssetTable from "./components/AssetTable";
-import Filter from "./components/Filter";
+import { Suspense } from "react";
+import AssetTable from "../components/AssetTable";
+import Filter from "../components/Filter";
 
 export default function Page() {
   return (
-    <>
+    <Suspense fallback={<div>fallback</div>}>
       <Filter />
       <div className="bg-neutral-500 h-px max-w-screen-sm w-full" />
       <AssetTable />
-    </>
+    </Suspense>
   );
 }

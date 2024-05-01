@@ -1,8 +1,9 @@
 import Recoil from "./Recoil";
-import AutoCompleteSearchBar from "./components/AutoCompleteSearchBar";
-import SearchBar from "./components/SearchBar";
-import Title from "./components/Title";
+import AutoCompleteSearchBar from "../components/AutoCompleteSearchBar";
+import SearchBar from "../components/SearchBar";
+import Title from "../components/Title";
 import "./global.css";
+import { Suspense } from "react";
 
 export default function RootLayout({
   children,
@@ -14,7 +15,9 @@ export default function RootLayout({
       <body className="w-screen h-max bg-neutral-900 flex flex-col items-center text-white py-36 px-10 m-auto gap-10">
         <Title />
         <Recoil>
-          <SearchBar />
+          <Suspense>
+            <SearchBar />
+          </Suspense>
           {children}
         </Recoil>
       </body>

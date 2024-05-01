@@ -1,4 +1,4 @@
-import { gameData } from "../../gameData";
+import { gameData } from "../gameData";
 
 const weapons = gameData.weapons;
 

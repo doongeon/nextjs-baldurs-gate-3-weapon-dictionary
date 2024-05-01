@@ -1,4 +1,4 @@
-import { Rarity } from "../Atom";
+import { Rarity } from "../app/Atom";
 
 export interface Weapon {
   name_ko: string;

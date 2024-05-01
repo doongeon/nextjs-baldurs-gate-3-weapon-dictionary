@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { autoCompeleteViewState, searchQueryState } from "../Atom";
+import { autoCompeleteViewState, searchQueryState } from "../app/Atom";
 import { useRecoilState, useRecoilValue } from "recoil";
 import filterWeapon from "../src/filterWeapon";
 import { Weapon } from "../src/interfaces";
