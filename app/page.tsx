@@ -3,7 +3,7 @@
 import { Suspense } from "react";
 import TableSection from "../components/TableSection";
 import Filter from "../components/Filter";
-
+import Head from "next/head";
 
 export default function Page() {
   return (

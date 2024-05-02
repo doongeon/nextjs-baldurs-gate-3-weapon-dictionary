@@ -4,6 +4,7 @@ import Title from "../components/Title";
 import "./global.css";
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "발게삼",
@@ -26,6 +27,12 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="glH39Ot9oC2J7TwW-y5kpjgj_nJ0Z-GlAcpgRgF1d6Q"
+        />
+      </Head>
       <body className="w-screen h-max bg-neutral-900 flex flex-col items-center text-white py-36 px-10 m-auto gap-10">
         <Title />
         <Recoil>
