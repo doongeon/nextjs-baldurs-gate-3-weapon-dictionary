@@ -77,7 +77,7 @@ export default function RarityFilterBtn({
       rarity={rarity}
       active={active}
       onClick={() => handleClick(rarity)}
-      className="cursor-pointer px-2 py-1 select-none"
+      className="cursor-pointer px-1 py-1 sm:px-2 sm:text-base select-none text-xs"
     >
       {text}
     </Button>

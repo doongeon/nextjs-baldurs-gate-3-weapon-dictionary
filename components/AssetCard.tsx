@@ -26,8 +26,6 @@ interface AssetCardProps {
   asset: Weapon;
 }
 
-// relative after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-gradient-to-b after:from-[rgba(0,0,0,0.8)] after:to-black after:blur-sm after:z-10
-
 export default function AssetCard({ asset }: AssetCardProps) {
   return (
     <>

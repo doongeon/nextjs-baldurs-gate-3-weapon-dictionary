@@ -67,7 +67,7 @@ export default function SearchBar() {
   return (
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-full max-w-screen-sm flex gap-5"
+        className="w-full max-w-screen-sm flex gap-5 relative"
       >
         <div className="w-full relative">
           <input
@@ -81,7 +81,7 @@ export default function SearchBar() {
           />
           <AutoCompleteSearchBar />
         </div>
-        <button className="" type="submit">
+        <button className="absolute right-3 top-1/2 -translate-y-1/2 sm:static sm:translate-y-0" type="submit">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

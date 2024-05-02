@@ -9,7 +9,7 @@ interface AssetTableItem {
 export default function AssetTableItem({ weapon }: AssetTableItem) {
   return (
     <Link
-      className="w-full grid grid-cols-3 border-b-2 border-b-neutral-600 py-3 gap-10 relative after:bg-white after:top-0 after:left-0 after:w-full hover:after:h-full hover:after:-z-10 after:blur-md hover:after:opacity-10 after:transition after:absolute after:opacity-0"
+      className="w-full sm:flex sm:*:w-1/3 flex justify-between *:w-1/2 border-b-2 border-b-neutral-600 py-3 gap-10 relative after:bg-white after:top-0 after:left-0 after:w-full hover:after:h-full hover:after:-z-10 after:blur-md hover:after:opacity-10 after:transition after:absolute after:opacity-0"
       href={`asset/${weapon.id}`}
     >
       <div
@@ -18,12 +18,14 @@ export default function AssetTableItem({ weapon }: AssetTableItem) {
       >
         {weapon.name_ko}
       </div>
-      <div className="flex flex-col">
+      <div className="sm:flex sm:flex-col hidden">
         {weapon.damage.map((damage) => (
           <div>{damage}</div>
         ))}
       </div>
-      <div className="flex justify-start items-center">{weapon.damageStat.maxDamage}</div>
+      <div className="flex justify-center items-center">
+        {weapon.damageStat.maxDamage}
+      </div>
     </Link>
   );
 }

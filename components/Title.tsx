@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Title() {
   return (
-    <div className="w-full max-w-screen-sm">
+    <div className="w-full max-w-screen-sm text-center">
       <Link href={"/"}>
         <h1 className="text-7xl font-bold">BG3 DICT</h1>
       </Link>
