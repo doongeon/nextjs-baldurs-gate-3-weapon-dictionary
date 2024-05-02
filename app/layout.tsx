@@ -8,6 +8,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "발게삼",
   description: "발더스 게이트 3 아이템 사전입니다.",
+  metadataBase: new URL("https://bg-3-dict.vercel.app/"),
+  openGraph: {
+    siteName: "발게삼",
+    title: "발게삼",
+    description: "발더스 게이트 3 아이템 사전입니다.",
+    images: "/opengraph-image.jpg",
+    url: "https://bg-3-dict.vercel.app/",
+  },
 };
 
 export default function RootLayout({
