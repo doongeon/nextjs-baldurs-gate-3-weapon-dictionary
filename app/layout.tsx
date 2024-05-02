@@ -1,9 +1,14 @@
 import Recoil from "./Recoil";
-import AutoCompleteSearchBar from "../components/AutoCompleteSearchBar";
 import SearchBar from "../components/SearchBar";
 import Title from "../components/Title";
 import "./global.css";
 import { Suspense } from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "발게삼",
+  description: "발더스 게이트 3 아이템 사전입니다.",
+};
 
 export default function RootLayout({
   children,

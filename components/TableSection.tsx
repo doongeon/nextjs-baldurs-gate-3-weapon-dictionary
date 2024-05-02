@@ -58,7 +58,11 @@ export default function TableSection() {
   return (
     <div className="w-full max-w-screen-sm flex flex-col gap-5 text-sm sm:text-base">
       <ShowBtn showAll={showAll} toggleShowAll={toggleShowAll} />
-      <WeaponTable showAll={showAll} searchAssets={searchAssets} />
+      {searchAssets.length === 0 ? (
+        <div className="text-center">없어요</div>
+      ) : (
+        <WeaponTable showAll={showAll} searchAssets={searchAssets} />
+      )}
     </div>
   );
 }
