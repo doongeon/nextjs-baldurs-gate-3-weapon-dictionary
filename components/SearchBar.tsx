@@ -29,7 +29,7 @@ export default function SearchBar() {
 
   const params = useSearchParams();
   const router = useRouter();
-  // const setAutoCompleteView = useSetRecoilState(autoCompeleteViewState);
+
   const setSearchQuery = useSetRecoilState(searchQueryState);
   const {
     register,
@@ -81,7 +81,10 @@ export default function SearchBar() {
           />
           <AutoCompleteSearchBar />
         </div>
-        <button className="absolute right-3 top-1/2 -translate-y-1/2 sm:static sm:translate-y-0" type="submit">
+        <button
+          className="absolute right-3 top-1/2 -translate-y-1/2 sm:static sm:translate-y-0"
+          type="submit"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

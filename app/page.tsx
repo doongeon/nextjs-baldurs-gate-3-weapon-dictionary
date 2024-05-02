@@ -9,7 +9,9 @@ export default function Page() {
     <div className="w-full flex flex-col gap-10 items-center">
       <Filter />
       <div className="bg-neutral-500 h-px max-w-screen-sm w-full" />
-      <TableSection />
+      <Suspense>
+        <TableSection />
+      </Suspense>
     </div>
   );
 }
