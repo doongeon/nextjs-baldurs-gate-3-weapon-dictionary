@@ -5,6 +5,7 @@ import "./global.css";
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "발게삼",
@@ -32,7 +33,8 @@ export default function RootLayout({
   return (
     <html>
       <SpeedInsights />
-      <body className="w-screen h-max bg-neutral-900 flex flex-col items-center text-white py-36 px-10 m-auto gap-10 overflow-scroll">
+      <Analytics />
+      <body className="w-screen h-max bg-neutral-900 flex flex-col items-center text-white py-36 px-10 m-auto gap-10 overflow-y-scroll">
         <Title />
         <Recoil>
           <Suspense>
