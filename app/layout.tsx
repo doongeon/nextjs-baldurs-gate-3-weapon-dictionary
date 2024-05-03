@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className="w-screen h-max bg-neutral-900 flex flex-col items-center text-white py-36 px-10 m-auto gap-10">
+      <body className="w-screen h-max bg-neutral-900 flex flex-col items-center text-white py-36 px-10 m-auto gap-10 overflow-scroll">
         <Title />
         <Recoil>
           <Suspense>
