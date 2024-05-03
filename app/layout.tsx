@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "발게삼",
     title: "발게삼",
     description: "발더스 게이트 3 아이템 사전입니다.",
-    images: [{ url: "/images/favicon.png", width: 120, height: 120 }],
+    images: [{ url: "/images/favicon.png", width: 400, height: 300 }],
     url: "https://bg-3-dict.vercel.app/",
   },
   verification: {
