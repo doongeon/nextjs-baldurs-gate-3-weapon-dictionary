@@ -4,6 +4,7 @@ import Title from "../components/Title";
 import "./global.css";
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "발게삼",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "발게삼",
     title: "발게삼",
     description: "발더스 게이트 3 아이템 사전입니다.",
-    images: "/images/favicon.png",
+    images: [{ url: "/images/favicon.png", width: 120, height: 120 }],
     url: "https://bg-3-dict.vercel.app/",
   },
   verification: {
@@ -29,6 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <Head>
+        <meta content="" />
+      </Head>
       <body className="w-screen h-max bg-neutral-900 flex flex-col items-center text-white py-36 px-10 m-auto gap-10 overflow-scroll">
         <Title />
         <Recoil>
