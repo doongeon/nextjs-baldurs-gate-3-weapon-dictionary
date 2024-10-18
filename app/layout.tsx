@@ -6,7 +6,6 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-import GoogleAdsense from "../components/GoogleAdsense";
 
 export const metadata: Metadata = {
     title: "발게삼",
@@ -33,8 +32,6 @@ export default function RootLayout({
 }) {
     return (
         <html>
-            <SpeedInsights />
-            <Analytics />
             <body className="w-screen h-max bg-neutral-900 flex flex-col items-center text-white py-36 px-10 m-auto gap-10 overflow-y-scroll">
                 <Title />
                 <Recoil>
@@ -42,9 +39,10 @@ export default function RootLayout({
                         <SearchBar />
                     </Suspense>
                     {children}
+                    <SpeedInsights />
+                    <Analytics />
                 </Recoil>
             </body>
-            <GoogleAdsense pId="1984992048330567" />
         </html>
     );
 }
