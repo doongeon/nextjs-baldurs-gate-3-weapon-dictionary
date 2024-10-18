@@ -1,44 +1,12 @@
 import { useRecoilState } from "recoil";
 import { Rarity, rarityFilterState } from "../app/Atom";
 import getRarityColor from "../src/getRarityColor";
-import styled from "styled-components";
 import { useEffect, useState } from "react";
 
 interface RarityFilterBtnProps {
     text: string;
     rarity: Rarity;
 }
-
-const ShiningBtn = styled.button<{ $rarity: Rarity; $active: boolean }>`
-    color: ${(props) =>
-        props.$active
-            ? "rgba(255,255,255, 0.8)"
-            : getRarityColor(props.$rarity)};
-    font-weight: 400;
-    border: 1px solid ${(props) => getRarityColor(props.$rarity)};
-    text-shadow: ${(props) => "0px 0px 5px " + getRarityColor(props.$rarity)};
-    box-shadow: ${(props) =>
-        "0px 0px 15px " +
-        getRarityColor(props.$rarity) +
-        ", inset 0px 0px 5px " +
-        getRarityColor(props.$rarity)};
-    transition: linear 0.4s;
-    position: relative;
-
-    &::after {
-        content: "";
-        z-index: -1;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        filter: blur(10px);
-        background-color: ${(props) =>
-            props.$active ? getRarityColor(props.$rarity) : "transparent"};
-        transition: linear 0.4s;
-    }
-`;
 
 export default function RarityFilterBtn({
     text,
@@ -75,13 +43,40 @@ export default function RarityFilterBtn({
     }, [rarityFilter]);
 
     return (
-        <ShiningBtn
-            $rarity={rarity}
-            $active={active}
+        <button
+            className={`
+            cursor-pointer 
+            text-xs 
+            px-1 py-1 
+            sm:px-2 
+            sm:text-base 
+            select-none 
+            font-normal 
+            border 
+            transition 
+            duration-400 
+            relative
+        `}
+            style={{
+                color: active ? "rgba(255,255,255, 1)" : getRarityColor(rarity),
+                borderColor: getRarityColor(rarity),
+                textShadow: `0px 0px 5px ${getRarityColor(rarity)}`,
+                boxShadow: active
+                    ? `
+                0px 0px 25px ${getRarityColor(rarity)},
+                inset 0px 0px 15px ${getRarityColor(rarity)}
+            `
+                    : `
+                0px 0px 15px ${getRarityColor(rarity)},
+                inset 0px 0px 5px ${getRarityColor(rarity)}
+            `,
+                position: "relative",
+                userSelect: "none",
+                transition: "linear 0.4s",
+            }}
             onClick={() => handleClick(rarity)}
-            className="cursor-pointer px-1 py-1 sm:px-2 sm:text-base select-none text-xs"
         >
             {text}
-        </ShiningBtn>
+        </button>
     );
 }
